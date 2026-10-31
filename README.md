@@ -1,7 +1,3 @@
-# RTR2-CTF Toolkit
-# Rise The Ranger 2 - Digital Forensics CTF Toolkit
-# Satsiber TNI Cyber Competition 2026
-
 ## Installation
 
 ```bash
