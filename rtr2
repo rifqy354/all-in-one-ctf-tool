@@ -1,0 +1,20 @@
+#!/bin/bash
+# RTR2-CTF - Rise The Ranger 2 Quick Launcher
+# Usage: ./rtr2 <command> [args]
+#   or:  bash rtr2 <command> [args]
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+TOOL="$SCRIPT_DIR/rtr2_ctf.py"
+
+if [ ! -f "$TOOL" ]; then
+    echo "[✗] rtr2_ctf.py not found in $SCRIPT_DIR"
+    exit 1
+fi
+
+if [ $# -eq 0 ]; then
+    python3 "$TOOL" --help
+    exit $?
+fi
+
+python3 "$TOOL" "$@"
+exit $?
